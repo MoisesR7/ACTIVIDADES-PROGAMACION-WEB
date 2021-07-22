@@ -1,0 +1,316 @@
+<!DOCTYPE HTML5>
+<html>
+	<head>
+		<title>Ejercicios prácticos HTML5</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilos.css">
+
+	</head>
+	<body>
+		<h1>TABLA</h1>
+		<table border="1" style="width: 100%">
+			<caption>PALABRAS RESERVADAS DE JAVASCRIPT</caption>
+			<colgroup>
+				<col style="width: 20%"/>
+				<col style="width: 40%"/>
+				<col style="width: 40%"/>
+			</colgroup>
+			<thead>
+				<tr>
+					<th rowspan="2">Palabra Reservada</th>
+					<th rowspan="2">Descripción</th>
+					<th rowspan="3">Ejemplo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>new</th>
+					<td>El operador new permite a los desarrolladores crear una instancia de un tipo de objeto definido por el usuario o de uno de los tipos de objeto integrados que tiene un función constructora.</td>
+					<td>function Car(make, model, year) {
+  						this.make = make;
+ 						this.model = model;
+  						this.year = year;
+						}
+
+const car1 = new Car('Eagle', 'Talon TSi', 1993);
+
+console.log(car1.make);
+// expected output: "Eagle"</td>
+					
+				</tr>
+				<tr>
+					<th>while</th>
+					<td>Crea un bucle que ejecuta una sentencia especificada mientras cierta condición se evalúe como verdadera. Dicha condición es evaluada antes de ejecutar la sentencia</td>
+					<td>n = 0; x = 0; while (n < 3) { n ++; x += n; </td>
+				</tr>
+				<tr>
+					<th>this</th>
+					<td>La palabra clave this de una función se comporta un poco diferente en Javascript en comparación con otros lenguajes. Además tiene algunas diferencias entre el modo estricto y el modo no estricto. En general, el valor de this está determinado por cómo se invoca a la función. No puede ser establecida mediante una asignación en tiempo de ejecución, y puede ser diferente cada vez que la función es invocada. </td>
+					<td>const test = {
+  prop: 42,
+  func: function() {
+    return this.prop;
+  },
+};
+
+console.log(test.func());
+// expected output: 42</td>
+				</tr>
+				<tr>
+					<th>break</th>
+					<td>Termina el bucle actual, sentecia switch o label y transfiere el control del programa a la siguiente sentencia a la sentecia de terminación de éstos elementos.</td>
+					<td>function comprobarBreak(x) {
+   var i = 0;
+   while (i < 6) {
+      if (i == 3)
+         break;
+      i++;
+   }
+   return i * x;
+}</td>
+				</tr>
+				<tr>
+					<th>switch & case ... default</th>
+					<td>La declaración switch evalúa una expresión, comparando el valor de esa expresión con una instancia case, y ejecuta declaraciones asociadas a ese case, así como las declaraciones en los case que siguen.</td>
+					<td>witch (expr) {
+  case 'Naranjas':
+    console.log('El kilogramo de naranjas cuesta $0.59.');
+    break;
+  case 'Manzanas':
+    console.log('El kilogramo de manzanas cuesta $0.32.');
+    break;
+  case 'Platanos':
+    console.log('El kilogramo de platanos cuesta $0.48.');
+    break;
+  case 'Cerezas':
+    console.log('El kilogramo de cerezas cuesta $3.00.');
+    break;
+  case 'Mangos':
+  case 'Papayas':
+    console.log('El kilogramo de mangos y papayas cuesta $2.79.');
+    break;
+  default:
+    console.log('Lo lamentamos, por el momento no disponemos de ' + expr + '.');
+}
+
+console.log("¿Hay algo más que te quisiera consultar?");</td>
+				</tr>
+				<tr>
+					<th>try & catch</th>
+					<td>La declaración try...catch señala un bloque de instrucciones a intentar (try), y especifica una respuesta si se produce una excepción (catch).</td>
+					<td>try {
+  nonExistentFunction();
+} catch (error) {
+  console.error(error);
+  // expected output: ReferenceError: nonExistentFunction is not defined
+  // Note - error messages will vary depending on browser
+}
+</td>
+				</tr>
+				<tr>
+					<th>class</th>
+					<td>La declaración class crea una nueva clase con el nombre proporcionado utilizando la herencia basada en prototipos</td>
+					<td>class Polygon {
+  constructor(height, width) {
+    this.name = 'Polygon';
+    this.height = height;
+    this.width = width;
+  }
+}
+
+class Square extends Polygon {
+  constructor(length) {
+    super(length, length);
+    this.name = 'Square';
+  }
+}</td>
+				</tr>
+				<tr>
+					<th>funtion</th>
+					<td>El operador function define una función dentro de una expresión.</td>
+					<td>var x = function(y) {
+   return y * y;
+};</td>
+				</tr>
+				<tr>
+					<th>yield</th>
+					<td>La palabra clave yield se usa para pausar y reanudar una función generadora (function* o función generadora heredada).</td>
+					<td>function* countAppleSales () {
+  let saleList = [3, 7, 5]
+  for (let i = 0; i < saleList.length; i++) {
+    yield saleList[i]
+  }
+}</td>
+				</tr>
+				<tr>
+					<th>const</th>
+					<td>Las variables constantes presentan un ámbito de bloque (block scope) tal y como lo hacen las variables definidas usando la instrucción let, con la particularidad de que el valor de una constante no puede cambiarse a través de la reasignación. Las constantes no se pueden redeclarar.</td>
+					<td>const a = 7;
+document.writeln("a es " + a + ".");</td>
+				</tr>
+				<tr>
+					<th>debugger</th>
+					<td>La sentencia debugger invoca cualquier funcionalidad de depuración disponible, tiene la misma función que un breakpoint. Si la funcionalidad de depuración no está disponible, esta sentencia no tiene efecto alguno.</td>
+					<td>function codigoPotencialmenteDefectuoso() {
+    debugger;
+    // realizar paso a paso o examinar código que contiene
+    // potenciales errores
+}</td>
+				</tr>
+				<tr>
+					<th>throw</th>
+					<td>Lanza una excepcion definida por el usuario.</td>
+					<td>throw "Error2"; // genera una excepción con un valor cadena throw 42; // genera una excepción con un valor 42 throw true; // genera una excepción con un valor true</td>
+				</tr>
+				<tr>
+					<th>var</th>
+					<td>	La sentencia var declara una variable, opcionalmente inicializándola con un valor.</td>
+					<td>var a = 0, b = 0;</td>
+				</tr>
+				<tr>
+					<th>if...else</th>
+					<td>Ejecuta una sentencia si una condición específicada es evaluada como verdadera. Si la condición es evaluada como falsa, otra sentencia puede ser ejecutada.</td>
+					<td>if (cipher_char == from_char) {
+   result = result + to_char;
+   x++;
+} else
+   result = result + clear_char;</td>
+				</tr>
+				<tr>
+					<th>continue</th>
+					<td>Termina la ejecución de las sentencias de la iteración actual del bucle actual o la etiqueta y continua la ejecución del bucle con la próxima iteración.</td>
+					<td>i = 0; n = 0; while (i < 5) { i++; if (i == 3) continue; n += i; }</td>
+				</tr>
+				<tr>
+					<th>empty</th>
+					<td>Un empty statement o sentencia vacía es usada para no proveer una sentencia, incluso si la sintaxis JavaScript esperase una.</td>
+					<td>Fila 2 Columna 2</td>
+				</tr>
+				<tr>
+					<th>void</th>
+					<td>El operador void se usa en cualquiera de los siguientes modos:
+
+void (expresion )
+void expresion
+El operador void especifica una expresión que se evalúa sin devolver un valor. expresion es una expresión JavaScript para evaluar. El paréntesis rodeando la expresión es opcional, pero usarlos es una buena práctica al programar.</td>
+					<td> a href="javascript:void(0)">Haga click aquí para no hacer nada </td>
+				</tr>
+					<tr>
+					<th>typeof</th>
+					<td>El operador typeof devuelve una cadena que indica el tipo del operando sin evaluarlo. operando es la cadena, variable, palabra clave u objeto para el que se devolverá su tipo. Los paréntesis son opcionales.</td>
+					<td>typeof miFuncion === 'function'
+typeof forma === 'string'
+typeof tamano === 'number'
+typeof hoy === 'object'
+typeof noExiste === 'undefined'</td>
+				</tr>
+				<tr>
+					<th>export</th>
+					<td>La declaración export se utiliza al crear módulos de JavaScript para exportar funciones, objetos o tipos de dato primitivos del módulo para que puedan ser utilizados por otros programas con la sentencia import.</td>
+					<td>export { name1, name2, …, nameN }; export { variable1 as name1, variable2 as name2, …, nameN }; export let name1, name2, …, nameN; // también var export let name1 = …, name2 = …, …, nameN; // también var, const</td>
+				</tr>
+				<tr>
+					<th>for await...of</th>
+					<td>a sentencia for await...of crea un bucle iterando tanto sobre objetos iterables asincrónicos como sincrónicos, incluyendo: built-in String, Array, objetos Array-like (por ej., arguments o NodeList), TypedArray, Map, Set, y async/sync iterables definidos por el usuario. Invoca un hook de iteración personalizada con sentencias a ser ejecutadas por el valor de cada propiedad diferente del objeto.</td>
+					<td>for await (variable of iterable) { sentencia }</td>
+				</tr>
+				<tr>
+					<th>for...in</th>
+					<td>La instrucción for-in itera sobre todas las propiedades enumerables de un objeto que está codificado por cadenas (ignorando los codificados por Símbolos, incluidas las propiedades enumerables heredadas.</td>
+					<td>var obj = {a: 1, b: 2, c: 3}; for (const prop in obj) { console.log(`obj.${prop} = ${obj[prop]}`); }</td>
+				</tr>
+				<tr>
+					<th>for...of</th>
+					<td>La sentencia sentencia for...of ejecuta un bloque de código para cada elemento de un objeto iterable, como lo son: String, Array, objetos similares a array (por ejemplo, arguments or NodeList), TypedArray, Map, Set e iterables definidos por el usuario.</td>
+					<td>let iterable = [10, 20, 30]; for (let value of iterable) { value += 1; console.log(value); }</td>
+				</tr>
+				<tr>
+					<th>import</th>
+					<td>La sentencia import se usa para importar funciones que han sido exportadas desde un módulo externo.</td>
+					<td>import defaultExport from "module-name"; import * as name from "module-name"; import { export } from "module-name";</td>
+				</tr>
+				<tr>
+					<th>import.meta</th>
+					<td>El objeto import.meta expone el contenido especifico de la metadata al módulo JavaScript. Este contiene informacion sobre el módulo, como por ejemplo, la URL del mismo.</td>
+					<td>console.log(import.meta); // { url: "file:///home/user/my-module.js" }</td>
+				</tr>
+
+				<tr>
+					<th>return</th>
+					<td>La sentencia return finaliza la ejecución de la función y especifica un valor para ser devuelto a quien llama a la función.</td>
+					<td>return; return true; return false; return x; return x + y / 3;</td>
+				</tr>
+					<tr>
+					<th>super</th>
+					<td>La palabra clave super es usada para acceder y llamar funciones del padre de un objeto.</td>
+					<td>lass Rectangle {
+  constructor(height, width) {
+    this.name = 'Rectangle';
+    this.height = height;
+    this.width = width;
+  }
+  sayName() {
+    console.log('Hi, I am a ', this.name + '.');
+  }
+  get area() {
+    return this.height * this.width;
+  }
+  set area(value) {
+    this.height = this.width = Math.sqrt(value);
+  }
+}
+
+class Square extends Rectangle {
+  constructor(length) {
+    this.height; // ReferenceError, super necesita ser llamado primero!
+
+    // Aquí, llama al constructor de la clase padre con las longitudes
+    // previstas para el ancho y la altura de Rectangle
+    super(length, length);
+
+    // Nota: En las clases derivadas, se debe llamar a super() antes de
+    // poder usar 'this'. Salir de esto provocará un error de referencia.
+    this.name = 'Square';
+  }
+}</td>
+				</tr>
+					<tr>
+					<th>in</th>
+					<td>El operador in devuelve true si la propiedad especificada está en el objeto especificado o su prototipo.</td>
+					<td>// Arrays
+var arboles = new Array("secoya", "pino", "cedro", "roble", "arce");
+0 in arboles        // devuelve true
+3 in arboles        // devuelve true
+6 in arboles        // devuelve false
+"pino" in arboles   // devuelve false (debe especificar el número de índice,
+                    // no el valor del índice)
+"length" in arboles // devuelve true (length es una propiedad de Array)
+
+// Objetos predefinidos
+"PI" in Math        // devuelve true
+
+// Objetos personalizados
+var micoche = {marca: "Honda", modelo: "Accord", año: 1998};
+"marca" in micoche  // devuelve true
+"modelo" in micoche // devuelve true</td>
+				</tr>
+				<tr>
+					<th>delete</th>
+					<td>El operador delete  elimina una propiedad de un objeto.</td>
+					<td>function foo() {
+  delete x;
+  let x;
+}
+
+function bar() {
+  delete y;
+  const y;
+}</td>
+				</tr>
+
+
+			</tbody>
+		</table>
+<p>AUTOR: MOISES ALBERTO REYES PEÑA</p>
+	</body>
+</html>
